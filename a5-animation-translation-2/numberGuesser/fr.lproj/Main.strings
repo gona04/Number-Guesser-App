@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Congratulations"; ObjectID = "1hj-ah-s0r"; */
+"1hj-ah-s0r.text" = "FCongratulations";
+
+/* Class = "UIButton"; configuration.title = "Guess!"; ObjectID = "2Vu-VI-NVF"; */
+"2Vu-VI-NVF.configuration.title" = "FGuess!";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2Vu-VI-NVF"; */
+"2Vu-VI-NVF.normalTitle" = "FButton";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "KOX-eT-JL3"; */
+"KOX-eT-JL3.text" = "F???";
+
+/* Class = "UILabel"; text = "Use the slider to Guess"; ObjectID = "RsU-7T-s7S"; */
+"RsU-7T-s7S.text" = "FUse the slider to Guess";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "U9e-EY-hbT"; */
+"U9e-EY-hbT.text" = "F0";
+
+/* Class = "UISegmentedControl"; adH-UY-qyb.segmentTitles[0] = "easy"; ObjectID = "adH-UY-qyb"; */
+"adH-UY-qyb.segmentTitles[0]" = "Feasy";
+
+/* Class = "UISegmentedControl"; adH-UY-qyb.segmentTitles[1] = "medium"; ObjectID = "adH-UY-qyb"; */
+"adH-UY-qyb.segmentTitles[1]" = "Fmedium";
+
+/* Class = "UISegmentedControl"; adH-UY-qyb.segmentTitles[2] = "hard"; ObjectID = "adH-UY-qyb"; */
+"adH-UY-qyb.segmentTitles[2]" = "Fhard";

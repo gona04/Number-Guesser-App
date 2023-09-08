@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="numberGuesser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOX-eT-JL3">
+                                <rect key="frame" x="194.5" y="297" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="bIT-KS-SBq">
+                                <rect key="frame" x="105" y="632" width="204" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="H7i-gs-vOl"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setGuess:" destination="BYZ-38-t0r" eventType="valueChanged" id="LwR-qe-MaS"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vu-VI-NVF">
+                                <rect key="frame" x="164.5" y="385" width="85" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="C-Guess!"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CH5-jx-5p7"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="adH-UY-qyb">
+                                <rect key="frame" x="80" y="484" width="254" height="32"/>
+                                <segments>
+                                    <segment title="C-easy"/>
+                                    <segment title="C-medium"/>
+                                    <segment title="C-hard"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeDiff:" destination="BYZ-38-t0r" eventType="valueChanged" id="rlX-nW-d45"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C-Congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hj-ah-s0r">
+                                <rect key="frame" x="136.5" y="255" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C-Use the slider to Guess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsU-7T-s7S">
+                                <rect key="frame" x="109" y="573" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9e-EY-hbT">
+                                <rect key="frame" x="201.5" y="187" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="adH-UY-qyb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1N2-hC-3PT"/>
+                            <constraint firstItem="adH-UY-qyb" firstAttribute="top" secondItem="2Vu-VI-NVF" secondAttribute="bottom" constant="68" id="2UI-1l-8SK"/>
+                            <constraint firstItem="1hj-ah-s0r" firstAttribute="top" secondItem="U9e-EY-hbT" secondAttribute="bottom" constant="47" id="2ez-gr-ad0"/>
+                            <constraint firstItem="U9e-EY-hbT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Ne-ac-OZK"/>
+                            <constraint firstItem="2Vu-VI-NVF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7sK-iE-fdH"/>
+                            <constraint firstItem="2Vu-VI-NVF" firstAttribute="top" secondItem="KOX-eT-JL3" secondAttribute="bottom" constant="67" id="9ue-OL-bdV"/>
+                            <constraint firstItem="KOX-eT-JL3" firstAttribute="top" secondItem="1hj-ah-s0r" secondAttribute="bottom" constant="21" id="EYX-Lc-0Eo"/>
+                            <constraint firstItem="2Vu-VI-NVF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fsd-CZ-XQc"/>
+                            <constraint firstItem="RsU-7T-s7S" firstAttribute="top" secondItem="adH-UY-qyb" secondAttribute="bottom" constant="58" id="Pv2-lF-q6R"/>
+                            <constraint firstItem="U9e-EY-hbT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="V0p-Fw-nJK"/>
+                            <constraint firstItem="KOX-eT-JL3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W9f-Me-BXu"/>
+                            <constraint firstItem="RsU-7T-s7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aE0-Vj-ZRe"/>
+                            <constraint firstItem="1hj-ah-s0r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aQL-0b-M29"/>
+                            <constraint firstItem="RsU-7T-s7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e3c-Y6-fQi"/>
+                            <constraint firstItem="bIT-KS-SBq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sd2-np-L8Q"/>
+                            <constraint firstItem="bIT-KS-SBq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v5o-cf-WmZ"/>
+                            <constraint firstItem="bIT-KS-SBq" firstAttribute="top" secondItem="RsU-7T-s7S" secondAttribute="bottom" constant="38" id="xUG-6Z-70D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="KOX-eT-JL3" id="j87-tL-M3s"/>
+                        <outlet property="guessLabel" destination="U9e-EY-hbT" id="LXi-eD-ScO"/>
+                        <outlet property="guessSlider" destination="bIT-KS-SBq" id="Q7j-al-QCr"/>
+                        <outlet property="resultLabel" destination="1hj-ah-s0r" id="a65-gr-Sec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
